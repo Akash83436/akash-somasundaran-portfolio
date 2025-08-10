@@ -1,8 +1,4 @@
 /* background.css */
 body {
-  background-image: url('image.jpg'); /* Update with correct image path */
-  background-size: cover;       /* Makes the image fill the screen */
-  background-position: center;  /* Keeps it centered */
-  background-repeat: no-repeat; /* No repeating tiles */
-  background-attachment: fixed; /* Stays still when scrolling */
+  background-color : yellow;
 }
