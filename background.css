@@ -9,19 +9,41 @@ body {
   height: 100vh;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  flex-direction: row;
 }
 
-/* Style for main content */
+/* Sidebar on top-left */
+.sidebar {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Navigation link styles */
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Main content box */
 .container {
-  background-image: url('image.jpg');
-  background-size: cover;
-  background-position: center;
-  width: 80%;
-  padding: 20px;
+  margin-left: 200px; /* space for sidebar */
+  margin-top: 80px;
+  background-color: rgba(0, 0, 0, 0.8); /* black background with transparency */
+  padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: white;
 }
-
