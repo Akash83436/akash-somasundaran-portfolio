@@ -7,6 +7,36 @@ body {
     line-height: 1.6;
 }
 header {
+<style>
+  .experience-list ul {
+    list-style: none; /* removes default bullets */
+    padding: 0;
+  }
+
+  .experience-list li {
+    margin-bottom: 2rem; /* creates the two-line gap */
+  }
+
+  /* Optional: arrow instead of bullets */
+  .experience-list li::before {
+    content: "➜ ";
+    color: #ffffff;
+    font-size: 1.2em;
+    margin-right: 6px;
+  }
+
+  .company-link {
+    margin-left: 10px;
+    font-size: 0.9em;
+    color: #add8e6;
+    text-decoration: none;
+  }
+
+  .company-link:hover {
+    text-decoration: underline;
+  }
+</style>
+
 .company-link {
   margin-left: 10px;
   font-size: 0.9em;
