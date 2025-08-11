@@ -16,7 +16,7 @@ body {
 
 /* Style for main content */
 .container {
-  background-image: url('your-image.jpg');
+  background-image: url('image.jpg');
   background-size: cover;
   background-position: center;
   width: 80%;
@@ -24,3 +24,4 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
