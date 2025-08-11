@@ -7,6 +7,17 @@ body {
     line-height: 1.6;
 }
 header {
+.company-link {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
     background: linear-gradient(90deg, #0056b3, #007BFF);
     color: white;
     border-bottom: 1px solid #004a99;
