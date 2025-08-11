@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="background.css">
   <style>
+    /* Navigation bar aligned to the left */
+    nav ul {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white; /* White menu text */
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Experience list styling */
     .experience-list ul {
       list-style: none;
       padding: 0;
@@ -16,10 +37,20 @@
       margin-bottom: 2rem;
     }
 
+    .experience-list a {
+      color: white; /* White text for job titles */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .experience-list a:hover {
+      text-decoration: underline;
+    }
+
     .company-link {
       margin-left: 10px;
       font-size: 0.9em;
-      color: #add8e6;
+      color: #cccccc;
       text-decoration: none;
     }
 
