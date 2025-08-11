@@ -5,13 +5,13 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  color: #f5f5f5; /* Light gray text for readability */
+  color: #ffffff; /* Pure white text */
 }
 
 /* Top navigation bar aligned to the right */
 nav {
   display: flex;
-  justify-content: flex-end; /* pushes menu to the right */
+  justify-content: flex-end;
   padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -26,7 +26,7 @@ nav .logo {
 }
 
 nav a {
-  color: #f5f5f5;
+  color: #ffffff;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
@@ -46,12 +46,48 @@ nav a:hover {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  color: #f5f5f5; /* Light text for contrast */
+  color: #ffffff;
+  font-size: 1.1rem; /* Slightly larger text */
+  line-height: 1.6;
 }
 
+/* Headings inside the content */
 .content h1, .content h2 {
   margin-top: 0;
-  color: #ffffff; /* Pure white for headings */
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+/* Replace bullet points with arrows */
+.content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.content ul li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.content ul li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* Styling for company links */
+.company-link {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.95rem;
+  color: #add8e6;
+  text-decoration: none;
+}
+
+.company-link:hover {
+  text-decoration: underline;
 }
 
 /* Responsive adjustments */
