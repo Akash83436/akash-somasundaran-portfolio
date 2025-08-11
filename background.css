@@ -1,71 +1,61 @@
-/* background.css */
-
-/* Subtle, professional gradient background for the full viewport */
+/* Full viewport black–white background */
 body {
-  background: linear-gradient(135deg, #2c3e50, #4ca1af); /* deep blue to teal */
+  background: linear-gradient(135deg, #000000, #ffffff);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   color: #f0f0f0;
-  display: flex;
 }
 
-/* Fixed-position sidebar with transparency and clean layout */
-.sidebar {
-  position: fixed;
-  top: 2rem;
-  left: 2rem;
+/* Top navigation bar aligned to the right */
+nav {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: flex-end; /* pushes menu to the right */
+  padding: 1rem 2rem;
   background: rgba(0, 0, 0, 0.4);
-  padding: 1.5rem;
-  border-radius: 8px;
-  width: 12rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-/* Sidebar navigation links with modern hover effect */
-.sidebar a {
+nav a {
   color: #f0f0f0;
   text-decoration: none;
+  margin-left: 1.5rem;
   font-weight: 500;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.sidebar a:hover {
-  color: #add8e6;
-  transform: translateX(4px);
+nav a:hover {
+  color: #dcdcdc;
 }
 
-/* Central content container styled for readability and depth */
+/* Experience section aligned to the left */
 .content {
-  margin-left: 15rem; /* leaves space for the sidebar */
-  margin-top: 6rem;
+  margin-top: 5rem; /* leave space for fixed nav */
+  margin-left: 2rem;
+  max-width: 800px;
   background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 10px;
-  width: calc(100% - 17rem);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Headings inside the content area for visual hierarchy */
 .content h1, .content h2 {
   margin-top: 0;
   color: #e0e0e0;
 }
 
-/* Responsive adjustment to enhance usability on smaller screens */
+/* Responsive for mobile */
 @media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 2rem;
+  nav {
+    flex-direction: column;
+    align-items: flex-end;
   }
   .content {
-    margin: 0;
-    width: 100%;
-    border-radius: 0;
+    margin: 5rem 1rem 1rem 1rem;
+    width: auto;
   }
 }
