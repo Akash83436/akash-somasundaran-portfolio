@@ -1,11 +1,11 @@
-/* Full viewport black–white background */
+/* Full viewport black–white gradient background */
 body {
   background: linear-gradient(135deg, #000000, #ffffff);
   font-family: 'Helvetica Neue', Arial, sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  color: #f0f0f0;
+  color: #f5f5f5; /* Light gray text for readability */
 }
 
 /* Top navigation bar aligned to the right */
@@ -20,8 +20,13 @@ nav {
   width: 100%;
 }
 
+/* Hide the logo text */
+nav .logo {
+  display: none;
+}
+
 nav a {
-  color: #f0f0f0;
+  color: #f5f5f5;
   text-decoration: none;
   margin-left: 1.5rem;
   font-weight: 500;
@@ -34,21 +39,22 @@ nav a:hover {
 
 /* Experience section aligned to the left */
 .content {
-  margin-top: 5rem; /* leave space for fixed nav */
+  margin-top: 5rem; /* space for fixed nav */
   margin-left: 2rem;
   max-width: 800px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: #f5f5f5; /* Light text for contrast */
 }
 
 .content h1, .content h2 {
   margin-top: 0;
-  color: #e0e0e0;
+  color: #ffffff; /* Pure white for headings */
 }
 
-/* Responsive for mobile */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
