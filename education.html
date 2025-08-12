@@ -5,50 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Education - Akash Karayil Somasundaran</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="background.css">
+  <style>
+    /* Navigation bar aligned to the left */
+    nav ul {
+      display: flex;
+      justify-content: flex-start;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white; /* White menu text */
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Education list styling */
+    .education-list ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .education-list li {
+      margin-bottom: 2rem;
+    }
+
+    .education-list h3 {
+      margin: 0;
+      color: white;
+    }
+
+    .education-list a {
+      color: #cccccc; /* Slightly lighter for institution names */
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .education-list a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">Akash Karayil Somasundaran</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="education.html" class="active">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="content">
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="education-list">
     <h1>Education</h1>
     <ul>
       <li>
         <h3>MSc in Logistics and Supply Chain Management</h3>
         <p>
-          <a href="https://www.northampton.ac.uk/" target="_blank" rel="noopener noreferrer">
-            University of Northampton
-          </a>
+          <a href="https://www.northampton.ac.uk/" target="_blank" rel="noopener noreferrer">↗ University of Northampton</a>
         </p>
       </li>
       <li>
         <h3>Bachelor's in Mechanical Engineering</h3>
         <p>
-          <a href="https://www.cet.ac.in/" target="_blank" rel="noopener noreferrer">
-            College of Engineering, Trivandrum
-          </a>
+          <a href="https://www.cet.ac.in/" target="_blank" rel="noopener noreferrer">↗ College of Engineering, Trivandrum</a>
         </p>
       </li>
       <li>
         <h3>Diploma in Mechanical Engineering</h3>
         <p>
-          <a href="https://www.sreeramapoly.ac.in/" target="_blank" rel="noopener noreferrer">
-            Sree Rama Government Polytechnic College, Thriprayar
-          </a>
+          <a href="https://www.sreeramapoly.ac.in/" target="_blank" rel="noopener noreferrer">↗ Sree Rama Government Polytechnic College, Thriprayar</a>
         </p>
       </li>
     </ul>
   </section>
+</main>
+
 </body>
 </html>
