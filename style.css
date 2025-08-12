@@ -15,6 +15,49 @@ header {
 
 /* Navigation styles */
 nav {
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <style>
+    nav {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 2%;
+      overflow-x: auto;
+      box-sizing: border-box;
+    }
+    nav ul {
+      display: flex;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      white-space: nowrap; /* prevent wrapping */
+      gap: 1rem;
+    }
+    nav ul li {
+      margin: 0;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5em 0;
+      display: block;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      color: #FFD700;
+    }
+  </style>
+</header>
+
     display: flex;
     justify-content: flex-start;  /* align nav items to the left */
     align-items: center;
