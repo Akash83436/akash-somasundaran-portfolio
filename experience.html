@@ -1,118 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience - Akash Somasundaran</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="background.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience - Akash Karayil Somasundaran</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="background.css" />
   <style>
-    /* Navigation bar aligned to the left */
+    /* Header and nav styling */
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     nav ul {
       display: flex;
-      justify-content: flex-start;
       list-style: none;
       padding: 0;
       margin: 0;
       gap: 20px;
     }
-
     nav ul li a {
-      color: white; /* White menu text */
+      color: white;
       text-decoration: none;
     }
-
     nav ul li a.active {
       font-weight: bold;
       text-decoration: underline;
     }
 
-    /* Experience list styling */
+    /* Main experience list */
+    .experience-list {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 20px;
+      color: white;
+    }
+    .experience-list h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
     .experience-list ul {
       list-style: none;
       padding: 0;
     }
-
     .experience-list li {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+    }
+    .experience-list a.job-link {
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .experience-list a.job-link:hover {
+      text-decoration: underline;
     }
 
-    .experience-list a {
-      color: white; /* White text for job titles */
+    /* Detailed job sections */
+    section.job-detail {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      color: white;
+      display: none; /* hidden by default */
+    }
+    section.job-detail.active {
+      display: block;
+    }
+    section.job-detail h2 {
+      margin-top: 0;
+    }
+    section.job-detail ul {
+      margin-top: 1rem;
+      list-style: disc;
+      padding-left: 20px;
+    }
+    section.job-detail a.back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #25d366;
       text-decoration: none;
       font-weight: bold;
     }
-
-    .experience-list a:hover {
+    section.job-detail a.back-link:hover {
       text-decoration: underline;
-    }
-
-    .company-link {
-      margin-left: 10px;
-      font-size: 0.9em;
-      color: #cccccc;
-      text-decoration: none;
-    }
-
-    .company-link:hover {
-      text-decoration: underline;
-    }
-
-    .job-dates {
-      display: block;
-      font-size: 0.9em;
-      color: #ccc;
-      margin-top: 2px;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="experience.html" class="active">Experience</a></li>
-      <li><a href="education.html" class="active">Education</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <section class="experience-list">
-    <h1>Professional Experience</h1>
-    <ul>
-      <li>
-        <a href="inbound-logistics.html">Inbound Logistics Coordinator – Cygnia Logistics, UK</a>
-        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">September 2024 – Present</span>
-      </li>
-      <li>
-        <a href="warehouse-returns.html">Warehouse Associate- Returns, Cygnia Logistics, UK</a>
-        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">January 2024 – September 2024</span>
-      </li>
-      <li>
-        <a href="warehouse-associate.html">Warehouse Associate – Part-Time, Wincanton, UK</a>
-        <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">June 2023 – December 2024</span>
-      </li>
-      <li>
-        <a href="distribution-operative.html">Distribution Centre Operative –Part-time, Tuffnells, UK</a>
-        <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">Apr 2023 – June 2023</span>
-      </li>
-      <li>
-        <a href="production-supervisor.html">Production Supervisor, Tec-know Dies Pvt. Ltd, India</a>
-        <a href="https://www.technowdies.com" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">Jul 2021 – Aug 2022</span>
-      </li>
-    </ul>
-  </section>
-</main>
+  <main>
+    <section class="experience-list">
+      <h1>Professional Experience</h1>
+      <ul>
+        <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, UK</a></li>
+        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate – Part-Time, UK</a></li>
+        <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative – UK</a></li>
+        <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor – India</a></li>
+      </ul>
+    </section>
+
+    <!-- Detailed Job Sections -->
+
+    <section id="inbound-logistics" class="job-detail">
+      <h2>Inbound Logistics Coordinator – Cygnia Logistics, UK</h2>
+      <ul>
+        <li>Managed inbound scheduling and supplier communication.</li>
+        <li>Utilized Manhattan SCALE WMS for inventory control and receipt validation.</li>
+        <li>Processed ASN discrepancies and coordinated returns with vendors.</li>
+        <li>Worked closely with warehouse team to ensure timely put-away of stock.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+    <section id="warehouse-associate" class="job-detail">
+      <h2>Warehouse Associate – Part-Time, UK</h2>
+      <ul>
+        <li>Handled returns processing and B2B packaging operations.</li>
+        <li>Scanned, sorted, and organized inventory using barcode systems.</li>
+        <li>Assisted in stock replenishment and cycle counts.</li>
+        <li>Operated under tight deadlines to meet daily shipping quotas.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+    <section id="distribution-centre" class="job-detail">
+      <h2>Distribution Centre Operative – UK</h2>
+      <ul>
+        <li>Performed picking, packing, and dispatch tasks in high-volume environment.</li>
+        <li>Maintained stock accuracy during order fulfillment processes.</li>
+        <li>Worked with RF scanners and warehouse management systems.</li>
+        <li>Adhered to health and safety protocols at all times.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+    <section id="production-supervisor" class="job-detail">
+      <h2>Production Supervisor – India</h2>
+      <ul>
+        <li>Oversaw production line operations ensuring quality and efficiency.</li>
+        <li>Led a team of 20+ technicians and machine operators.</li>
+        <li>Implemented preventive maintenance schedules to reduce downtime.</li>
+        <li>Monitored and analyzed production KPIs to meet output goals.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+  </main>
+
+  <script>
+    // Show/hide detailed job descriptions
+    const jobLinks = document.querySelectorAll('.job-link');
+    const jobDetails = document.querySelectorAll('.job-detail');
+    const backLinks = document.querySelectorAll('.back-link');
+    const listSection = document.querySelector('.experience-list');
+
+    jobLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const jobId = link.dataset.job;
+
+        // Hide list
+        listSection.style.display = 'none';
+
+        // Hide all details
+        jobDetails.forEach(section => section.classList.remove('active'));
+
+        // Show clicked job detail
+        document.getElementById(jobId).classList.add('active');
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      });
+    });
+
+    backLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        // Hide all details
+        jobDetails.forEach(section => section.classList.remove('active'));
+        // Show list again
+        listSection.style.display = 'block';
+        window.scrollTo(0, 0);
+      });
+    });
+  </script>
 
 </body>
 </html>
