@@ -36,13 +36,13 @@
     }
 
     /* Main experience list */
-    .experience-list {
+    main {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 20px;
       color: white;
     }
-    .experience-list h1 {
+    main h1 {
       text-align: center;
       margin-bottom: 2rem;
     }
@@ -65,8 +65,7 @@
 
     /* Detailed job sections */
     section.job-detail {
-      max-width: 1000px;
-      margin: 2rem auto;
+      margin-top: 3rem;
       padding: 1rem 20px;
       background: rgba(0, 0, 0, 0.4);
       border-radius: 8px;
@@ -94,6 +93,16 @@
     section.job-detail a.back-link:hover {
       text-decoration: underline;
     }
+    section.job-detail a.company-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section.job-detail a.company-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -114,8 +123,9 @@
   </header>
 
   <main>
+    <h1>Professional Experience</h1>
+    
     <section class="experience-list">
-      <h1>Professional Experience</h1>
       <ul>
         <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, UK</a></li>
         <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate – Part-Time, UK</a></li>
@@ -128,6 +138,7 @@
 
     <section id="inbound-logistics" class="job-detail">
       <h2>Inbound Logistics Coordinator – Cygnia Logistics, UK</h2>
+      <a href="https://www.cygnialogistics.co.uk/" target="_blank" rel="noopener" class="company-link">Company Website: www.cygnialogistics.co.uk</a>
       <ul>
         <li>Managed inbound scheduling and supplier communication.</li>
         <li>Utilized Manhattan SCALE WMS for inventory control and receipt validation.</li>
@@ -139,6 +150,7 @@
 
     <section id="warehouse-associate" class="job-detail">
       <h2>Warehouse Associate – Part-Time, UK</h2>
+      <a href="https://www.example-warehouse.com" target="_blank" rel="noopener" class="company-link">Company Website: www.example-warehouse.com</a>
       <ul>
         <li>Handled returns processing and B2B packaging operations.</li>
         <li>Scanned, sorted, and organized inventory using barcode systems.</li>
@@ -150,6 +162,7 @@
 
     <section id="distribution-centre" class="job-detail">
       <h2>Distribution Centre Operative – UK</h2>
+      <a href="https://www.example-distribution.com" target="_blank" rel="noopener" class="company-link">Company Website: www.example-distribution.com</a>
       <ul>
         <li>Performed picking, packing, and dispatch tasks in high-volume environment.</li>
         <li>Maintained stock accuracy during order fulfillment processes.</li>
@@ -161,6 +174,7 @@
 
     <section id="production-supervisor" class="job-detail">
       <h2>Production Supervisor – India</h2>
+      <a href="https://www.example-production.com" target="_blank" rel="noopener" class="company-link">Company Website: www.example-production.com</a>
       <ul>
         <li>Oversaw production line operations ensuring quality and efficiency.</li>
         <li>Led a team of 20+ technicians and machine operators.</li>
@@ -169,7 +183,6 @@
       </ul>
       <a href="#" class="back-link">← Back to Experience List</a>
     </section>
-
   </main>
 
   <script>
@@ -178,14 +191,16 @@
     const jobDetails = document.querySelectorAll('.job-detail');
     const backLinks = document.querySelectorAll('.back-link');
     const listSection = document.querySelector('.experience-list');
+    const heading = document.querySelector('main > h1');
 
     jobLinks.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();
         const jobId = link.dataset.job;
 
-        // Hide list
+        // Hide list and heading
         listSection.style.display = 'none';
+        heading.style.display = 'none';
 
         // Hide all details
         jobDetails.forEach(section => section.classList.remove('active'));
@@ -203,8 +218,9 @@
         e.preventDefault();
         // Hide all details
         jobDetails.forEach(section => section.classList.remove('active'));
-        // Show list again
+        // Show list and heading again
         listSection.style.display = 'block';
+        heading.style.display = 'block';
         window.scrollTo(0, 0);
       });
     });
