@@ -1,35 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About - Akash Karayil Somasundaran</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Akash Karayil Somasundaran</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="background.css" />
+  <style>
+    /* Header nav styling with right-aligned menu */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav ul li a.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* About section styling */
+    section {
+      color: white;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        justify-content: center;
+      }
+
+      section {
+        padding: 1rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-  <nav>
-    <div class="logo">Akash Karayil Somasundaran</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-<section>
-  <h1>About Me</h1>
-  <p> I am a dedicated and detail-oriented MSc graduate in Logistics and Supply Chain Management from the University of Northampton, UK. With a strong academic background and hands-on industry experience, I bring a practical understanding of end-to-end supply chain processes, warehouse operations, and production management.
 
-My professional journey began in India, where I completed a Diploma and B.Tech in Mechanical Engineering. I gained valuable experience as a Production Supervisor for one year, where I honed my skills in team leadership, process control, and production planning.
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-Upon moving to the UK, I further advanced my knowledge by pursuing a Master's degree while simultaneously gaining practical exposure through part-time work as a Warehouse Operator. During this time, I developed expertise in B2B and B2C operations, returns processing, and packing procedures, working with industry-standard systems such as Manhattan SCALE WMS.
+  <main>
+    <section>
+      <h1>About Me</h1>
+      <p>
+        I am a dedicated and detail-oriented MSc graduate in Logistics and Supply Chain Management from the University of Northampton, UK. With a strong academic background and hands-on industry experience, I bring a practical understanding of end-to-end supply chain processes, warehouse operations, and production management.
+      </p>
+      <p>
+        My professional journey began in India, where I completed a Diploma and B.Tech in Mechanical Engineering. I gained valuable experience as a Production Supervisor for one year, where I honed my skills in team leadership, process control, and production planning.
+      </p>
+      <p>
+        Upon moving to the UK, I further advanced my knowledge by pursuing a Master's degree while simultaneously gaining practical exposure through part-time work as a Warehouse Operator. During this time, I developed expertise in B2B and B2C operations, returns processing, and packing procedures, working with industry-standard systems such as Manhattan SCALE WMS.
+      </p>
+      <p>
+        Currently, I serve as an Inbound Logistics Coordinator at Cygnia Logistics. In this role, I am responsible for coordinating inbound shipments, managing inventory, and ensuring seamless communication between suppliers and internal teams. My role also involves continuous process optimization to enhance operational efficiency and accuracy.
+      </p>
+      <p>
+        I am passionate about leveraging technology and data-driven strategies to streamline supply chain operations and contribute to overall business performance. With a strong foundation in both technical and operational aspects of logistics, I aim to drive value through innovation, efficiency, and collaboration.
+      </p>
+    </section>
+  </main>
 
-Currently, I serve as an Inbound Logistics Coordinator at Cygnia Logistics. In this role, I am responsible for coordinating inbound shipments, managing inventory, and ensuring seamless communication between suppliers and internal teams. My role also involves continuous process optimization to enhance operational efficiency and accuracy.
-
-I am passionate about leveraging technology and data-driven strategies to streamline supply chain operations and contribute to overall business performance. With a strong foundation in both technical and operational aspects of logistics, I aim to drive value through innovation, efficiency, and collaboration.</p>
-</section>
 </body>
 </html>
