@@ -7,34 +7,11 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="background.css" />
   <style>
-    /* Background image with light overlay */
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      background: url("home.jpg") no-repeat center center fixed;
-      background-size: cover;
-      position: relative;
-    }
-
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.6); /* Light overlay */
-      z-index: -1;
-    }
-
     /* Header width match */
     .nav-container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 0 20px;
-      position: relative;
-      z-index: 1;
     }
 
     nav {
@@ -67,8 +44,6 @@
       text-align: center;
       padding: 4rem 2rem;
       color: white;
-      position: relative;
-      z-index: 1;
     }
 
     .hero h1 {
