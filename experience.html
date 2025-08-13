@@ -7,25 +7,22 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="background.css">
   <style>
-    /* Reset & base styles */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    /* Base styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-      color: #f5f5f5;
-      line-height: 1.6;
+      color: #e0e0e0;
+      line-height: 1.7;
     }
 
     header {
-      background: rgba(0,0,0,0.7);
+      background: rgba(0,0,0,0.85);
       padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     }
 
     nav ul {
@@ -37,7 +34,7 @@
 
     nav a {
       text-decoration: none;
-      color: #f5f5f5;
+      color: #e0e0e0;
       font-weight: 500;
       transition: color 0.3s;
     }
@@ -59,32 +56,31 @@
       margin-bottom: 2rem;
       font-size: 2.5rem;
       color: #25d366;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     .experience-list ul {
       list-style: none;
-      padding: 0;
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
     }
 
     .experience-list li {
-      background: rgba(255,255,255,0.05);
+      background: rgba(0,0,0,0.6);
       padding: 1rem 1.5rem;
-      border-left: 4px solid #25d366;
-      border-radius: 6px;
+      border-left: 5px solid #25d366;
+      border-radius: 8px;
       transition: background 0.3s, transform 0.2s;
     }
 
     .experience-list li:hover {
-      background: rgba(255,255,255,0.15);
+      background: rgba(0,0,0,0.75);
       transform: translateY(-2px);
     }
 
     .experience-list a.job-link {
-      color: #f5f5f5;
+      color: #e0e0e0;
       font-weight: 600;
       text-decoration: none;
       display: block;
@@ -96,9 +92,9 @@
 
     section.job-detail {
       margin-top: 3rem;
-      padding: 1.5rem 2rem;
-      background: rgba(0,0,0,0.5);
-      border-radius: 10px;
+      padding: 2rem;
+      background: rgba(0,0,0,0.7);
+      border-radius: 12px;
       display: none;
       animation: fadeIn 0.5s ease-in-out;
     }
@@ -110,17 +106,18 @@
     section.job-detail h2 {
       color: #25d366;
       margin-bottom: 1rem;
-      font-size: 1.8rem;
+      font-size: 2rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
 
     section.job-detail ul {
       margin-top: 1rem;
       list-style: disc;
-      padding-left: 20px;
+      padding-left: 1.5rem;
     }
 
     section.job-detail ul li {
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.7rem;
     }
 
     section.job-detail a.company-link,
@@ -139,93 +136,97 @@
       color: #1ec954;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+    @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 
     /* Responsive */
     @media (max-width: 600px) {
-      .experience-list ul {
-        grid-template-columns: 1fr;
-      }
-      main h1 {
-        font-size: 2rem;
-      }
+      main h1 { font-size: 2rem; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html" class="active">Experience</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <h1>Professional Experience</h1>
-    <section class="experience-list">
-      <ul>
-        <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, UK</a></li>
-        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate – Returns, Wincanton, UK</a></li>
-        <li><a class="job-link" data-job="warehouse-operator" href="#">Warehouse Operator – Wincanton, UK</a></li>
-        <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative – Tuffnells, UK</a></li>
-        <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor – Tec-know Dies, India</a></li>
-      </ul>
-    </section>
+<main>
+  <h1>Professional Experience</h1>
 
-    <!-- Job Details -->
-    <section id="inbound-logistics" class="job-detail">
-      <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present</h2>
-      <a href="https://www.cygnialogistics.co.uk" target="_blank" class="company-link">Visit Company Website</a>
-      <ul>
-        <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
-        <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues.</li>
-        <li>Prepared non-conformance forms and resolved inventory discrepancies.</li>
-        <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
-        <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting warehouse efficiency.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
+  <section class="experience-list">
+    <ul>
+      <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, UK</a></li>
+      <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate – Returns, Wincanton, UK</a></li>
+      <li><a class="job-link" data-job="warehouse-operator" href="#">Warehouse Operator – Wincanton, UK</a></li>
+      <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative – Tuffnells, UK</a></li>
+      <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor – Tec-know Dies, India</a></li>
+    </ul>
+  </section>
 
-    <section id="warehouse-associate" class="job-detail">
-      <h2>Warehouse Associate – Returns, Wincanton</h2>
-      <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
-      <ul>
-        <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification and documentation.</li>
-        <li>Inspected items, determined disposition, and updated inventory records.</li>
-        <li>Streamlined intake and inspection processes, improving efficiency by 15–20%.</li>
-        <li>Maintained detailed records for audits and quality checks.</li>
-        <li>Adhered to SOPs and safety protocols, processing 150+ returns/day with 98% accuracy.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
+  <!-- Job Details -->
+  <section id="inbound-logistics" class="job-detail">
+    <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present</h2>
+    <a href="https://www.cygnialogistics.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+    <ul>
+      <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
+      <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues.</li>
+      <li>Prepared non-conformance forms and resolved inventory discrepancies.</li>
+      <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
+      <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting warehouse efficiency.</li>
+    </ul>
+    <a href="#" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <section id="warehouse-operator" class="job-detail">
-      <h2>Warehouse Operator – Wincanton</h2>
-      <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
-      <ul>
-        <li>Prepared and packed B2B orders according to customer and carrier specifications.</li>
-        <li>Verified packing documentation (manifests, labels, invoices) for accuracy.</li>
-        <li>Applied carrier-specific guidelines for labeling, palletization, and consolidation.</li>
-        <li>Met daily KPIs while maintaining high packaging standards.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
+  <section id="warehouse-associate" class="job-detail">
+    <h2>Warehouse Associate – Returns, Wincanton</h2>
+    <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+    <ul>
+      <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification and documentation.</li>
+      <li>Inspected items, determined disposition, and updated inventory records.</li>
+      <li>Streamlined intake and inspection processes, improving efficiency by 15–20%.</li>
+      <li>Maintained detailed records for audits and quality checks.</li>
+      <li>Adhered to SOPs and safety protocols, processing 150+ returns/day with 98% accuracy.</li>
+    </ul>
+    <a href="#" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <section id="distribution-centre" class="job-detail">
-      <h2>Distribution Centre Operative – Tuffnells</h2>
-      <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">Visit Company Website</a>
-      <ul>
-        <li>Verified postcodes for accurate bay allocation.</li>
-        <li>Optimized storage space and supported timely dispatch.</li>
-        <li>Collaborated with team members to ensure smooth goods flow.</li>
-        <li
+  <section id="warehouse-operator" class="job-detail">
+    <h2>Warehouse Operator – Wincanton</h2>
+    <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+    <ul>
+      <li>Prepared and packed B2B orders according to customer and carrier specifications.</li>
+      <li>Verified packing documentation (manifests, labels, invoices) for accuracy.</li>
+      <li>Applied carrier-specific guidelines for labeling, palletization, and consolidation.</li>
+      <li>Met daily KPIs while maintaining high packaging standards.</li>
+    </ul>
+    <a href="#" class="back-link">← Back to Experience List</a>
+  </section>
+
+  <section id="distribution-centre" class="job-detail">
+    <h2>Distribution Centre Operative – Tuffnells</h2>
+    <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+    <ul>
+      <li>Verified postcodes for accurate bay allocation.</li>
+      <li>Optimized storage space and supported timely dispatch.</li>
+      <li>Collaborated with team members to ensure smooth goods flow.</li>
+      <li>Adhered to safety protocols and daily operational procedures.</li>
+    </ul>
+    <a href="#" class="back-link">← Back to Experience List</a>
+  </section>
+
+  <section id="production-supervisor" class="job-detail">
+    <h2>Production Supervisor – Tec-know Dies, India</h2>
+    <a href="#" target="_blank" class="company-link">Visit Company Website</a>
+    <ul>
+      <li>Supervised production team, ensuring adherence to production schedules and quality standards.</li>
+      <li>Managed inventory of raw materials and finished products, reducing wastage by 10%.</li>
+      <li>Coordinated with cross-functional teams for timely delivery of projects
