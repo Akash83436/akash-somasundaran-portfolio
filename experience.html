@@ -1,139 +1,122 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experience - Akash Karayil Somasundaran</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="background.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience - Akash Somasundaran</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="background.css">
   <style>
-    /* Header and nav styling */
-    .nav-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+    /* Navigation bar aligned to the left */
     nav ul {
       display: flex;
+      justify-content: flex-start;
       list-style: none;
       padding: 0;
       margin: 0;
       gap: 20px;
     }
+
     nav ul li a {
-      color: white;
+      color: white; /* White menu text */
       text-decoration: none;
     }
+
     nav ul li a.active {
       font-weight: bold;
       text-decoration: underline;
     }
 
-    /* Main experience list */
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 20px;
-      color: white;
-    }
-    main h1 {
-      text-align: center;
-      margin-top: 5rem; /* Pushes it down from the header */
-      margin-bottom: 2rem;
-    }
+    /* Experience list styling */
     .experience-list ul {
       list-style: none;
       padding: 0;
     }
+
     .experience-list li {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
-    .experience-list a.job-link {
-      color: #25d366;
+
+    .experience-list a {
+      color: white; /* White text for job titles */
       text-decoration: none;
       font-weight: bold;
-      cursor: pointer;
     }
-    .experience-list a.job-link:hover {
+
+    .experience-list a:hover {
       text-decoration: underline;
     }
 
-    /* Detailed job sections */
-    section.job-detail {
-      margin-top: 3rem;
-      padding: 1rem 20px;
-      background: rgba(0, 0, 0, 0.4);
-      border-radius: 8px;
-      color: white;
-      display: none; /* hidden by default */
+    .company-link {
+      margin-left: 10px;
+      font-size: 0.9em;
+      color: #cccccc;
+      text-decoration: none;
     }
-    section.job-detail.active {
+
+    .company-link:hover {
+      text-decoration: underline;
+    }
+
+    .job-dates {
       display: block;
-    }
-    section.job-detail h2 {
-      margin-top: 0;
-    }
-    section.job-detail ul {
-      margin-top: 1rem;
-      list-style: disc;
-      padding-left: 20px;
-    }
-    section.job-detail a.back-link {
-      display: inline-block;
-      margin-top: 1.5rem;
-      color: #25d366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section.job-detail a.back-link:hover {
-      text-decoration: underline;
-    }
-    section.job-detail a.company-link {
-      display: inline-block;
-      margin-bottom: 1rem;
-      color: #25d366;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section.job-detail a.company-link:hover {
-      text-decoration: underline;
+      font-size: 0.9em;
+      color: #ccc;
+      margin-top: 2px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="nav-container">
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="experience.html" class="active">Experience</a></li>
-          <li><a href="education.html">Education</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html" class="active">Experience</a></li>
+      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
+<main>
+  <section class="experience-list">
     <h1>Professional Experience</h1>
-    <section class="experience-list">
-      <ul>
-        <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, The United Kingdom</a></li>
-        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate (Returns)- Wincanton, The United Kingdom</a></li>
-        <li><a class="job-link" data-job="warehouse-operator" href="#"> Warehouse Operator- Wincanton The United Kingdom</a></li>
-        <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative- Tuffnells, The United KingdomK</a></li>
-        <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor- Teck-now dies, India</a></li>
-      </ul>
-    </section>
+    <ul>
+      <li>
+        <a href="inbound-logistics.html">Inbound Logistics Coordinator – Cygnia Logistics, UK</a>
+        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
+        <span class="job-dates">September 2024 – Present</span>
+      </li>
+      <li>
+        <a href="warehouse-returns.html">Warehouse Associate- Returns, Cygnia Logistics, UK</a>
+        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
+        <span class="job-dates">January 2024 – September 2024</span>
+      </li>
+      <li>
+        <a href="warehouse-associate.html">Warehouse Associate – Part-Time, Wincanton, UK</a>
+        <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">↗ Company Website</a>
+        <span class="job-dates">June 2023 – December 2024</span>
+      </li>
+      <li>
+        <a href="distribution-operative.html">Distribution Centre Operative –Part-time, Tuffnells, UK</a>
+        <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">↗ Company Website</a>
+        <span class="job-dates">Apr 2023 – June 2023</span>
+      </li>
+      <li>
+        <a href="production-supervisor.html">Production Supervisor, Tec-know Dies Pvt. Ltd, India</a>
+        <a href="https://www.technowdies.com" target="_blank" class="company-link">↗ Company Website</a>
+        <span class="job-dates">Jul 2021 – Aug 2022</span>
+      </li>
+    </ul>
+  </section>
+</main>
+
+</body>
+</html>
+
 
     <!-- Detailed Job Sections -->
 
