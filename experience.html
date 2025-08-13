@@ -1,225 +1,241 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Experience - Akash Somasundaran</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience - Akash Karayil Somasundaran</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="background.css" />
   <style>
-    /* Body and background */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: url('image2.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
-      background-color: rgba(0,0,0,0.6); /* fallback if image is light */
-      backdrop-filter: brightness(0.85); /* makes image light */
+    /* Header and nav styling */
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-
-    /* Navigation bar aligned to the left */
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      flex-wrap: wrap;
+    }
     nav ul {
       display: flex;
-      justify-content: flex-start;
       list-style: none;
-      padding: 10px 20px;
+      padding: 0;
       margin: 0;
       gap: 20px;
-      background: rgba(0,0,0,0.5); /* semi-transparent navbar */
     }
-
     nav ul li a {
       color: white;
       text-decoration: none;
     }
-
     nav ul li a.active {
       font-weight: bold;
       text-decoration: underline;
     }
 
-    /* Experience list styling */
+    /* Main experience list */
+    main {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 20px;
+      color: white;
+    }
+    main h1 {
+      text-align: center;
+      margin-top: 5rem; /* Pushes it down from the header */
+      margin-bottom: 2rem;
+    }
     .experience-list ul {
       list-style: none;
       padding: 0;
-      margin: 20px;
     }
-
     .experience-list li {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+    }
+    .experience-list a.job-link {
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .experience-list a.job-link:hover {
+      text-decoration: underline;
     }
 
-    .experience-list a {
-      color: #fff;
+    /* Detailed job sections */
+    section.job-detail {
+      margin-top: 3rem;
+      padding: 1rem 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      color: white;
+      display: none; /* hidden by default */
+    }
+    section.job-detail.active {
+      display: block;
+    }
+    section.job-detail h2 {
+      margin-top: 0;
+    }
+    section.job-detail ul {
+      margin-top: 1rem;
+      list-style: disc;
+      padding-left: 20px;
+    }
+    section.job-detail a.back-link {
+      display: inline-block;
+      margin-top: 1.5rem;
+      color: #25d366;
       text-decoration: none;
       font-weight: bold;
     }
-
-    .experience-list a:hover {
+    section.job-detail a.back-link:hover {
       text-decoration: underline;
     }
-
-    .company-link {
-      margin-left: 10px;
-      font-size: 0.9em;
-      color: #cccccc;
-      text-decoration: none;
-    }
-
-    .company-link:hover {
-      text-decoration: underline;
-    }
-
-    .job-dates {
-      display: block;
-      font-size: 0.9em;
-      color: #ccc;
-      margin-top: 2px;
-    }
-
-    /* Job details */
-    .job-detail {
-      display: none;
-      padding: 20px;
-      margin: 20px;
-      background: rgba(0,0,0,0.6);
-      border-radius: 10px;
-    }
-
-    .job-detail h2 {
-      margin-top: 0;
-    }
-
-    .back-link {
+    section.job-detail a.company-link {
       display: inline-block;
-      margin-top: 10px;
-      color: #fff;
+      margin-bottom: 1rem;
+      color: #25d366;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section.job-detail a.company-link:hover {
       text-decoration: underline;
-      cursor: pointer;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="showSection('home')">Home</a></li>
-      <li><a href="#" onclick="showSection('about')">About</a></li>
-      <li><a href="#" class="active">Experience</a></li>
-      <li><a href="#" onclick="showSection('education')">Education</a></li>
-      <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<main>
-  <!-- Experience list -->
-  <section class="experience-list" id="experience-list">
+  <main>
     <h1>Professional Experience</h1>
-    <ul>
-      <li>
-        <a href="#" onclick="showSection('inbound-logistics')">Inbound Logistics Coordinator – Cygnia Logistics, UK</a>
-        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">September 2024 – Present</span>
-      </li>
-      <li>
-        <a href="#" onclick="showSection('warehouse-returns')">Warehouse Associate- Returns, Cygnia Logistics, UK</a>
-        <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">January 2024 – September 2024</span>
-      </li>
-      <li>
-        <a href="#" onclick="showSection('warehouse-associate')">Warehouse Associate – Part-Time, Wincanton, UK</a>
-        <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">June 2023 – December 2024</span>
-      </li>
-      <li>
-        <a href="#" onclick="showSection('distribution-centre')">Distribution Centre Operative – Part-time, Tuffnells, UK</a>
-        <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">Apr 2023 – June 2023</span>
-      </li>
-      <li>
-        <a href="#" onclick="showSection('production-supervisor')">Production Supervisor, Tec-know Dies Pvt. Ltd, India</a>
-        <a href="https://www.technowdies.com" target="_blank" class="company-link">↗ Company Website</a>
-        <span class="job-dates">Jul 2021 – Aug 2022</span>
-      </li>
-    </ul>
-  </section>
+    <section class="experience-list">
+      <ul>
+        <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, The United Kingdom</a></li>
+        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate (Returns)- Wincanton, The United Kingdom</a></li>
+        <li><a class="job-link" data-job="warehouse-operator" href="#"> Warehouse Operator- Wincanton The United Kingdom</a></li>
+        <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative- Tuffnells, The United Kingdom</a></li>
+        <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor- Teck-now dies, India</a></li>
+      </ul>
+    </section>
 
-  <!-- Job Details -->
-  <section id="inbound-logistics" class="job-detail">
-    <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present, UK</h2>
-    <a href="https://www.cygnia.net" target="_blank" class="company-link">Company Website</a>
-    <ul>
-      <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
-      <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items.</li>
-      <li>Prepared non-conformance forms for inventory discrepancies.</li>
-      <li>Resolved logistical issues by coordinating with transport and receiving departments.</li>
-    </ul>
-    <span class="back-link" onclick="showSection('experience-list')">← Back to Experience List</span>
-  </section>
+    <!-- Detailed Job Sections -->
 
-  <section id="warehouse-returns" class="job-detail">
-    <h2>Warehouse Associate- Returns – Cygnia Logistics, UK</h2>
-    <a href="https://www.cygnia.net" target="_blank" class="company-link">Company Website</a>
-    <ul>
-      <li>Processed returned goods through Manhattan SCALE WMS accurately.</li>
-      <li>Inspected returned items and updated inventory records.</li>
-      <li>Reduced returns handling time by 15–20% through process optimization.</li>
-    </ul>
-    <span class="back-link" onclick="showSection('experience-list')">← Back to Experience List</span>
-  </section>
+    <section id="inbound-logistics" class="job-detail">
+      <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present, The United Kingdom</h2>
+      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
+      <ul>
+        <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
+        <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues as required.</li>
+        <li>Prepared and submitted non-conformance forms for damaged, missing, or excess stock, ensuring prompt resolution of inventory discrepancies.</li>
+        <li>Resolved logistical issues by proactively communicating with transport and receiving departments.</li>
+        <li>Communicated with carriers, team leads, and inventory teams to resolve delivery issues and prioritize urgent receipts.</li>
+        <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
+        <li>Helped refine goods receiving SOPs, leading to smoother transportation scheduling and dock utilization.</li>
+        <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting efficient movement of goods in the warehouse.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-  <section id="warehouse-associate" class="job-detail">
-    <h2>Warehouse Associate – Part-Time, Wincanton, UK</h2>
-    <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Company Website</a>
-    <ul>
-      <li>Prepared and packed B2B orders, verifying against system data.</li>
-      <li>Applied carrier-specific labeling and load consolidation guidelines.</li>
-      <li>Maintained high standards of accuracy and packaging quality.</li>
-    </ul>
-    <span class="back-link" onclick="showSection('experience-list')">← Back to Experience List</span>
-  </section>
+    <section id="warehouse-associate" class="job-detail">
+      <h2>Warehouse Associate – Returns, Wincanton, UK</h2>
+      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
+      <ul>
+        <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification, sorting, and documentation.</li>
+        <li>Inspected returned items for damage or discrepancies, determined disposition (restock, repair, or scrap), and updated inventory records accordingly.</li>
+        <li>Resolved return discrepancies by collaborating with inventory control and customer service teams to maintain high accuracy and customer satisfaction.</li>
+        <li>Reduced returns handling time by streamlining intake and inspection processes, contributing to a 15–20% improvement in overall efficiency.</li>
+        <li>Supported reverse logistics operations by preparing return shipments to vendors and managing return-to-stock workflows.</li>
+        <li>Maintained detailed records of returned items to support audits, quality checks, and root cause analysis.</li>
+        <li>Adhered to SOPs and safety protocols throughout the returns process, ensuring compliance with company and regulatory standards.</li>
+        <li>Processed an average of 150+ returned items per day with 98% accuracy.</li>
+        <li>Helped reduce backlog in returns area by 30% through process optimization.</li>
+        <li>Oversaw customer returns and non-conformance processes, reducing handling errors by 15% and ensuring compliance with SOPs.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-  <section id="distribution-centre" class="job-detail">
-    <h2>Distribution Centre Operative – Part-time, Tuffnells, UK</h2>
-    <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">Company Website</a>
-    <ul>
-      <li>Verified postcodes for accurate distribution bay allocation.</li>
-      <li>Assisted in efficient dispatch and receiving of parcels.</li>
-    </ul>
-    <span class="back-link" onclick="showSection('experience-list')">← Back to Experience List</span>
-  </section>
+    <section id="warehouse-operator" class="job-detail">
+      <h2>Warehouse Operator, Wincanton, The United Kingdom</h2>
+      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
+      <ul>
+        <li>Prepared and packed large-volume B2B orders, ensuring products were grouped correctly per customer and carrier specifications.</li>
+        <li>Generated and verified detailed packing documentation (manifests, labels, invoices) to meet customer and logistics partner requirements.</li>
+        <li>Cross-checked order lines against system data before sealing to prevent dispatch errors and improve outbound accuracy.</li>
+        <li>Applied carrier-specific guidelines (e.g., DPD, UPS, DHL) for labeling, palletization, and load consolidation.</li>
+        <li>Flagged packing discrepancies, damages, or incomplete orders during the final check to minimize returns and improve service levels.</li>
+        <li>Met daily KPIs while maintaining high standards of accuracy and packaging quality.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-  <section id="production-supervisor" class="job-detail">
-    <h2>Production Supervisor, Tec-know Dies Pvt. Ltd, India</h2>
-    <a href="https://www.technowdies.com" target="_blank" class="company-link">Company Website</a>
-    <ul>
-      <li>Supervised production line, improving efficiency and quality control.</li>
-      <li>Coordinated team schedules and maintained safety protocols.</li>
-    </ul>
-    <span class="back-link" onclick="showSection('experience-list')">← Back to Experience List</span>
-  </section>
+    <section id="distribution-centre" class="job-detail">
+      <h2>Distribution Centre Operative (Part-time) – The United Kingdom</h2>
+      <a href="https://www.tuffnells.co.uk/" target="_blank" rel="noopener" class="company-link">Company Website/</a>
+      <ul>
+        <li>Verified postcodes for accurate distribution bay allocation.</li>
+        <li>Optimized package flow by correct distribution across vans.</li>
+        <li>Maintained high safety and compliance standards within the DC.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-</main>
+    <section id="production-supervisor" class="job-detail">
+      <h2>Production Supervisor – Tec-know Dies Pvt Ltd, India</h2>
+      <a href="https://www.tecknowdies.com/" target="_blank" rel="noopener" class="company-link">Company Website/</a>
+      <ul>
+        <li>Managed day-to-day production operations, ensuring quality, productivity, and safety standards were consistently met.</li>
+        <li>Monitored machine operations, production line efficiency, and workforce performance to meet output targets.</li>
+        <li>Scheduled shifts, assigned tasks, and coordinated between production, quality, and maintenance teams.</li>
+        <li>Conducted root cause analysis for production issues and implemented corrective measures to minimize downtime.</li>
+        <li>Ensured compliance with safety protocols and company policies, reducing accidents and improving operational efficiency.</li>
+        <li>Maintained production records, generated reports, and liaised with management on performance metrics and improvement plans.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-<script>
-  function showSection(id) {
-    // Hide all job details
-    const sections = document.querySelectorAll('.job-detail, .experience-list');
-    sections.forEach(section => section.style.display = 'none');
+  </main>
 
-    // Show selected section
-    const selected = document.getElementById(id);
-    if (selected) {
-      selected.style.display = 'block';
-    }
-  }
+  <script>
+    // Handle showing job details
+    const jobLinks = document.querySelectorAll('.job-link');
+    const jobSections = document.querySelectorAll('.job-detail');
+    const backLinks = document.querySelectorAll('.back-link');
 
-  // Show experience list by default
-  showSection('experience-list');
-</script>
+    jobLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const jobId = link.getAttribute('data-job');
+        jobSections.forEach(section => section.classList.remove('active'));
+        document.getElementById(jobId).classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    backLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        jobSections.forEach(section => section.classList.remove('active'));
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
 
 </body>
 </html>
