@@ -7,6 +7,24 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="background.css" />
   <style>
+    body {
+      background: url('home.jpg') no-repeat bottom center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    /* Light overlay to reduce intensity */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Adjust darkness */
+      z-index: -1;
+    }
+
     /* Header width match */
     .nav-container {
       max-width: 1000px;
@@ -44,25 +62,6 @@
       text-align: center;
       padding: 4rem 2rem;
       color: white;
-      background: url('home.jpg') center center / cover no-repeat;
-      position: relative;
-    }
-
-    /* Light overlay to reduce intensity */
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.4);
-      z-index: 0;
-    }
-
-    .hero h1, .hero p, .btn {
-      position: relative;
-      z-index: 1;
     }
 
     .hero h1 {
