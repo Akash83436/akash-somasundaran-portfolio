@@ -18,7 +18,7 @@
     }
 
     nav ul li a {
-      color: white; /* White menu text */
+      color: white;
       text-decoration: none;
     }
 
@@ -37,13 +37,13 @@
       margin-bottom: 2rem;
     }
 
-    .experience-list a {
-      color: white; /* White text for job titles */
+    .experience-list a.job-link {
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .experience-list a:hover {
+    .experience-list a.job-link:hover {
       text-decoration: underline;
     }
 
@@ -64,6 +64,23 @@
       color: #ccc;
       margin-top: 2px;
     }
+
+    .job-detail {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #555;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -74,103 +91,106 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="experience.html" class="active">Experience</a></li>
-      <li><a href="education.html" class="active">Education</a></li>
+      <li><a href="education.html">Education</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main>
+<main id="experience-list">
   <section class="experience-list">
     <h1>Professional Experience</h1>
     <ul>
       <li>
-        <a href="inbound-logistics.html">Inbound Logistics Coordinator – Cygnia Logistics, UK</a>
+        <a href="#inbound-logistics" class="job-link">Inbound Logistics Coordinator – Cygnia Logistics, UK</a>
         <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
         <span class="job-dates">September 2024 – Present</span>
       </li>
       <li>
-        <a href="warehouse-returns.html">Warehouse Associate- Returns, Cygnia Logistics, UK</a>
+        <a href="#warehouse-returns" class="job-link">Warehouse Associate- Returns, Cygnia Logistics, UK</a>
         <a href="https://www.cygnia.net" target="_blank" class="company-link">↗ Company Website</a>
         <span class="job-dates">January 2024 – September 2024</span>
       </li>
       <li>
-        <a href="warehouse-associate.html">Warehouse Associate – Part-Time, Wincanton, UK</a>
+        <a href="#warehouse-associate" class="job-link">Warehouse Associate – Part-Time, Wincanton, UK</a>
         <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">↗ Company Website</a>
         <span class="job-dates">June 2023 – December 2024</span>
       </li>
       <li>
-        <a href="distribution-operative.html">Distribution Centre Operative –Part-time, Tuffnells, UK</a>
+        <a href="#distribution-centre" class="job-link">Distribution Centre Operative – Part-time, Tuffnells, UK</a>
         <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">↗ Company Website</a>
         <span class="job-dates">Apr 2023 – June 2023</span>
       </li>
       <li>
-        <a href="production-supervisor.html">Production Supervisor, Tec-know Dies Pvt. Ltd, India</a>
+        <a href="#production-supervisor" class="job-link">Production Supervisor, Tec-know Dies Pvt. Ltd, India</a>
         <a href="https://www.technowdies.com" target="_blank" class="company-link">↗ Company Website</a>
         <span class="job-dates">Jul 2021 – Aug 2022</span>
       </li>
     </ul>
   </section>
-</main>
 
-</body>
-</html>
+  <!-- Detailed Job Sections -->
 
+  <section id="inbound-logistics" class="job-detail">
+    <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present, UK</h2>
+    <a href="https://www.cygnia.net" target="_blank" class="company-link">Company Website</a>
+    <ul>
+      <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
+      <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues as required.</li>
+      <li>Prepared and submitted non-conformance forms for damaged, missing, or excess stock, ensuring prompt resolution of inventory discrepancies.</li>
+      <li>Resolved logistical issues by proactively communicating with transport and receiving departments.</li>
+      <li>Communicated with carriers, team leads, and inventory teams to resolve delivery issues and prioritize urgent receipts.</li>
+      <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
+      <li>Helped refine goods receiving SOPs, leading to smoother transportation scheduling and dock utilization.</li>
+      <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting efficient movement of goods in the warehouse.</li>
+    </ul>
+    <a href="#experience-list" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <!-- Detailed Job Sections -->
+  <section id="warehouse-returns" class="job-detail">
+    <h2>Warehouse Associate – Returns, Cygnia Logistics, UK</h2>
+    <a href="https://www.cygnia.net" target="_blank" class="company-link">Company Website</a>
+    <ul>
+      <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification, sorting, and documentation.</li>
+      <li>Inspected returned items for damage or discrepancies, determined disposition (restock, repair, or scrap), and updated inventory records accordingly.</li>
+      <li>Resolved return discrepancies by collaborating with inventory control and customer service teams to maintain high accuracy and customer satisfaction.</li>
+      <li>Reduced returns handling time by streamlining intake and inspection processes, contributing to a 15–20% improvement in overall efficiency.</li>
+      <li>Supported reverse logistics operations by preparing return shipments to vendors and managing return-to-stock workflows.</li>
+      <li>Maintained detailed records of returned items to support audits, quality checks, and root cause analysis.</li>
+      <li>Adhered to SOPs and safety protocols throughout the returns process, ensuring compliance with company and regulatory standards.</li>
+      <li>Processed an average of 150+ returned items per day with 98% accuracy.</li>
+      <li>Helped reduce backlog in returns area by 30% through process optimization.</li>
+      <li>Oversaw customer returns and non-conformance processes, reducing handling errors by 15% and ensuring compliance with SOPs.</li>
+    </ul>
+    <a href="#experience-list" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <section id="inbound-logistics" class="job-detail">
-      <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present, The United Kingdom</h2>
-      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
-      <ul>
-        <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
-        <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues as required.</li>
-        <li>Prepared and submitted non-conformance forms for damaged, missing, or excess stock, ensuring prompt resolution of inventory discrepancies.</li>
-        <li>Resolved logistical issues by proactively communicating with transport and receiving departments.</li>
-        <li>Communicated with carriers, team leads, and inventory teams to resolve delivery issues and prioritize urgent receipts.</li>
-        <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
-        <li>Helped refine goods receiving SOPs, leading to smoother transportation scheduling and dock utilization.</li>
-        <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting efficient movement of goods in the warehouse.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
+  <section id="warehouse-associate" class="job-detail">
+    <h2>Warehouse Associate – Part-Time, Wincanton, UK</h2>
+    <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Company Website</a>
+    <ul>
+      <li>Prepared and packed large-volume B2B orders, ensuring products were grouped correctly per customer and carrier specifications.</li>
+      <li>Generated and verified detailed packing documentation (manifests, labels, invoices) to meet customer and logistics partner requirements.</li>
+      <li>Cross-checked order lines against system data before sealing to prevent dispatch errors and improve outbound accuracy.</li>
+      <li>Applied carrier-specific guidelines (e.g., DPD, UPS, DHL) for labeling, palletization, and load consolidation.</li>
+      <li>Flagged packing discrepancies, damages, or incomplete orders during the final check to minimize returns and improve service levels.</li>
+      <li>Met daily KPIs while maintaining high standards of accuracy and packaging quality.</li>
+    </ul>
+    <a href="#experience-list" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <section id="warehouse-associate" class="job-detail">
-      <h2>Warehouse Associate – Returns,Wincanton,  UK</h2>
-      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
-      <ul>
-        <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification, sorting, and documentation.</li>
-        <li>Inspected returned items for damage or discrepancies, determined disposition (restock, repair, or scrap), and updated inventory records accordingly.</li>
-        <li>Resolved return discrepancies by collaborating with inventory control and customer service teams to maintain high accuracy and customer satisfaction.</li>
-        <li>Reduced returns handling time by streamlining intake and inspection processes, contributing to a 15–20% improvement in overall efficiency.</li>
-        <li>Supported reverse logistics operations by preparing return shipments to vendors and managing return-to-stock workflows.</li>
-        <li>Maintained detailed records of returned items to support audits, quality checks, and root cause analysis.</li>
-        <li>Adhered to SOPs and safety protocols throughout the returns process, ensuring compliance with company and regulatory standards.</li>
-        <li>Processed an average of 150+ returned items per day with 98% accuracy.</li>
-        <li>Helped reduce backlog in returns area by 30% through process optimization.</li>
-        <li>Oversaw customer returns and non-conformance processes, reducing handling errors by 15% and ensuring compliance with SOPs.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
-    
-    <section id="warehouse-operator" class="job-detail">
-      <h2>Warehouse Operator,Wincanton The United Kingdomn,  UK</h2>
-      <a href="https://www.wincanton.co.uk/industries/eFulfilment/ecommerce" target="_blank" rel="noopener" class="company-link">Company Website/</a>
-      <ul>
-        <li>Prepared and packed large-volume B2B orders, ensuring products were grouped correctly per customer and carrier specifications.</li>
-        <li>Generated and verified detailed packing documentation (manifests, labels, invoices) to meet customer and logistics partner requirements.</li>
-        <li>Cross-checked order lines against system data before sealing to prevent dispatch errors and improve outbound accuracy.</li>
-        <li>Applied carrier-specific guidelines (e.g., DPD, UPS, DHL) for labeling, palletization, and load consolidation.</li>
-        <li>Flagged packing discrepancies, damages, or incomplete orders during the final check to minimize returns and improve service levels.</li>
-        <li>Met daily KPIs while maintaining high standards of accuracy and packaging quality.</li>
-      </ul>
-      <a href="#" class="back-link">← Back to Experience List</a>
-    </section>
+  <section id="distribution-centre" class="job-detail">
+    <h2>Distribution Centre Operative (Part-time), Tuffnells, UK</h2>
+    <a href="https://www.tuffnells.co.uk/" target="_blank" class="company-link">Company Website</a>
+    <ul>
+      <li>Verified postcodes for accurate distribution bay allocation.</li>
+      <li>Sorted, scanned, and allocated parcels to appropriate areas for efficient dispatch.</li>
+      <li>Monitored inbound and outbound parcels to maintain operational flow and avoid bottlenecks.</li>
+    </ul>
+    <a href="#experience-list" class="back-link">← Back to Experience List</a>
+  </section>
 
-    <section id="distribution-centre" class="job-detail">
-      <h2>Distribution Centre Operative (Part-time) – The United Kingdom</h2>
-      <a href="https://www.tuffnells.co.uk/" target="_blank" rel="noopener" class="company-link">Company Website/</a>
-      <ul>
-        <li>Verified postcodes for accurate distribution bay allocation.</li>
-        <li
+  <section id="production-supervisor" class="job-detail">
+    <h2>Production Supervisor, Tec-know Dies Pvt. Ltd, India</h2>
+    <a href="https://www.technowdies.com" target
