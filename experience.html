@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Professional Experience - Akash Somasundaran</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Experience - Akash Karayil Somasundaran</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="background.css">
   <style>
-    /* General Styles */
-    body {
-      font-family: 'Inter', sans-serif;
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
       margin: 0;
-      background: #1a1a1a; /* Dark professional background */
-      color: #f1f1f1;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      color: #f5f5f5;
       line-height: 1.6;
     }
 
-    a {
-      color: #00d084;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    a:hover {
-      color: #00ffa0;
-      text-decoration: underline;
-    }
-
     header {
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,0.7);
       padding: 1rem 0;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.5);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -38,66 +32,73 @@
       display: flex;
       justify-content: center;
       list-style: none;
-      margin: 0;
-      padding: 0;
       gap: 2rem;
     }
 
-    nav ul li a {
-      font-weight: 600;
-      font-size: 0.95rem;
+    nav a {
+      text-decoration: none;
+      color: #f5f5f5;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    nav ul li a.active {
-      border-bottom: 2px solid #00d084;
+    nav a.active, nav a:hover {
+      color: #25d366;
+      border-bottom: 2px solid #25d366;
       padding-bottom: 2px;
     }
 
     main {
-      max-width: 900px;
-      margin: 4rem auto;
+      max-width: 1000px;
+      margin: 4rem auto 2rem auto;
       padding: 0 20px;
     }
 
     main h1 {
       text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 3rem;
-      color: #ffffff;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: #25d366;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
 
-    /* Experience list cards */
     .experience-list ul {
       list-style: none;
       padding: 0;
       display: grid;
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
 
     .experience-list li {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: 10px;
-      transition: transform 0.3s, background 0.3s;
+      background: rgba(255,255,255,0.05);
+      padding: 1rem 1.5rem;
+      border-left: 4px solid #25d366;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
     }
 
     .experience-list li:hover {
-      background: rgba(0, 208, 132, 0.1);
-      transform: translateY(-3px);
+      background: rgba(255,255,255,0.15);
+      transform: translateY(-2px);
     }
 
     .experience-list a.job-link {
+      color: #f5f5f5;
       font-weight: 600;
+      text-decoration: none;
       display: block;
-      font-size: 1rem;
     }
 
-    /* Detailed job sections */
+    .experience-list a.job-link:hover {
+      color: #25d366;
+    }
+
     section.job-detail {
       margin-top: 3rem;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      background: rgba(0,0,0,0.5);
+      border-radius: 10px;
       display: none;
       animation: fadeIn 0.5s ease-in-out;
     }
@@ -107,37 +108,49 @@
     }
 
     section.job-detail h2 {
-      margin-top: 0;
-      color: #00d084;
-      font-size: 1.5rem;
+      color: #25d366;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
     section.job-detail ul {
       margin-top: 1rem;
+      list-style: disc;
       padding-left: 20px;
     }
 
-    section.job-detail a.back-link {
-      display: inline-block;
-      margin-top: 1.5rem;
-      font-weight: 600;
+    section.job-detail ul li {
+      margin-bottom: 0.6rem;
     }
 
-    section.job-detail a.company-link {
+    section.job-detail a.company-link,
+    section.job-detail a.back-link {
       display: inline-block;
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      color: #25d366;
       font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    section.job-detail a.company-link:hover,
+    section.job-detail a.back-link:hover {
+      text-decoration: underline;
+      color: #1ec954;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
+    /* Responsive */
     @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 1rem;
+      .experience-list ul {
+        grid-template-columns: 1fr;
+      }
+      main h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -162,15 +175,57 @@
     <section class="experience-list">
       <ul>
         <li><a class="job-link" data-job="inbound-logistics" href="#">Inbound Logistics Coordinator – Cygnia Logistics, UK</a></li>
-        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate (Returns) – Wincanton, UK</a></li>
+        <li><a class="job-link" data-job="warehouse-associate" href="#">Warehouse Associate – Returns, Wincanton, UK</a></li>
         <li><a class="job-link" data-job="warehouse-operator" href="#">Warehouse Operator – Wincanton, UK</a></li>
         <li><a class="job-link" data-job="distribution-centre" href="#">Distribution Centre Operative – Tuffnells, UK</a></li>
         <li><a class="job-link" data-job="production-supervisor" href="#">Production Supervisor – Tec-know Dies, India</a></li>
       </ul>
     </section>
 
-    <!-- Job Details will remain same, just will now have the new styling -->
-  </main>
+    <!-- Job Details -->
+    <section id="inbound-logistics" class="job-detail">
+      <h2>Inbound Logistics Coordinator – Cygnia Logistics, Oct 2024 – Present</h2>
+      <a href="https://www.cygnialogistics.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+      <ul>
+        <li>Managed inbound logistics operations using Manhattan SCALE WMS, improving receiving accuracy and processing speed.</li>
+        <li>Inspected and received inbound shipments, identifying damaged, over-delivered, or missing items and escalating issues.</li>
+        <li>Prepared non-conformance forms and resolved inventory discrepancies.</li>
+        <li>Supported cycle counting and reconciliation in the receiving area to maintain system-to-physical stock alignment.</li>
+        <li>Operated Powered Pallet Trucks (PPTs) with certification, supporting warehouse efficiency.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
 
-</body>
-</html>
+    <section id="warehouse-associate" class="job-detail">
+      <h2>Warehouse Associate – Returns, Wincanton</h2>
+      <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+      <ul>
+        <li>Processed returned goods through Manhattan SCALE WMS, ensuring accurate identification and documentation.</li>
+        <li>Inspected items, determined disposition, and updated inventory records.</li>
+        <li>Streamlined intake and inspection processes, improving efficiency by 15–20%.</li>
+        <li>Maintained detailed records for audits and quality checks.</li>
+        <li>Adhered to SOPs and safety protocols, processing 150+ returns/day with 98% accuracy.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+    <section id="warehouse-operator" class="job-detail">
+      <h2>Warehouse Operator – Wincanton</h2>
+      <a href="https://www.wincanton.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+      <ul>
+        <li>Prepared and packed B2B orders according to customer and carrier specifications.</li>
+        <li>Verified packing documentation (manifests, labels, invoices) for accuracy.</li>
+        <li>Applied carrier-specific guidelines for labeling, palletization, and consolidation.</li>
+        <li>Met daily KPIs while maintaining high packaging standards.</li>
+      </ul>
+      <a href="#" class="back-link">← Back to Experience List</a>
+    </section>
+
+    <section id="distribution-centre" class="job-detail">
+      <h2>Distribution Centre Operative – Tuffnells</h2>
+      <a href="https://www.tuffnells.co.uk" target="_blank" class="company-link">Visit Company Website</a>
+      <ul>
+        <li>Verified postcodes for accurate bay allocation.</li>
+        <li>Optimized storage space and supported timely dispatch.</li>
+        <li>Collaborated with team members to ensure smooth goods flow.</li>
+        <li
