@@ -27,24 +27,22 @@
       text-decoration: underline;
     }
 
-    /* Projects list styling */
-    .projects-list ul {
-      list-style: none;
-      padding: 0;
+    /* Project section styling */
+    .project {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.05);
     }
 
-    .projects-list li {
-      margin-bottom: 1.5rem;
-    }
-
-    .projects-list a {
+    .project h2 {
       color: white;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 0.5rem;
     }
 
-    .projects-list a:hover {
-      text-decoration: underline;
+    .project p {
+      color: white;
+      line-height: 1.6;
     }
   </style>
 </head>
@@ -64,13 +62,24 @@
 </header>
 
 <main>
-  <section class="projects-list">
-    <h1>Projects</h1>
-    <ul>
-      <li><a href="project1.html">Digital Twins in Warehouse Operations</a></li>
-      <li><a href="project2.html">IoT-enabled Process Optimization</a></li>
-      <li><a href="project3.html">Event Coordination & NSS Volunteering</a></li>
-    </ul>
+  <section>
+    <h1 style="color: white;">Projects</h1>
+
+    <div class="project">
+      <h2>Digital Twins in Warehouse Operations</h2>
+      <p>This project explored the integration of Digital Twin technology to monitor and simulate warehouse processes in real-time, allowing for improved decision-making, predictive maintenance, and operational efficiency. The research involved modeling warehouse layouts, connecting IoT-enabled sensors, and simulating workflows for performance analysis.</p>
+    </div>
+
+    <div class="project">
+      <h2>IoT-enabled Process Optimization</h2>
+      <p>Focused on implementing IoT devices to track and optimize warehouse processes, this project examined sensor-based tracking, automated alerts for delays, and real-time data visualization dashboards to enhance operational performance and reduce lead times.</p>
+    </div>
+
+    <div class="project">
+      <h2>Event Coordination & NSS Volunteering</h2>
+      <p>Organized and coordinated multiple events during academic tenure, managing logistics, budgeting, and promotions. Actively participated in NSS activities including flood rehabilitation efforts, blood donation camps, and rural area clean-up drives.</p>
+    </div>
+
   </section>
 </main>
 
