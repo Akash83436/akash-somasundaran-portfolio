@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -44,6 +44,25 @@
       text-align: center;
       padding: 4rem 2rem;
       color: white;
+      background: url('home.jpg') center center / cover no-repeat;
+      position: relative;
+    }
+
+    /* Light overlay to reduce intensity */
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 0;
+    }
+
+    .hero h1, .hero p, .btn {
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
